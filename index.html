@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shray | Power BI Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Portfolio</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="theme-toggle">🌙</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Hi, I'm Shray Sharma 👋</h1>
+    <p>Power BI Developer | Data Analyst | DAX Expert</p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a data-driven developer with 1 year of experience using Power BI to build engaging dashboards, solve business problems, and drive insights. I'm passionate about data storytelling and turning raw numbers into visual narratives.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="filter-buttons">
+      <button onclick="filterProjects('all')">All</button>
+      <button onclick="filterProjects('business')">Business</button>
+      <button onclick="filterProjects('ecommerce')">E-Commerce</button>
+      <button onclick="filterProjects('entertainment')">Entertainment</button>
+    </div>
+
+    <div class="project-grid">
+      <div class="project-card business">
+        <h3>Restaurant Orders Analysis</h3>
+        <p>Analyzed order trends, customer behavior, and peak times to optimize operations.</p>
+        <a href="#" target="_blank">🔗 View Dashboard</a>
+      </div>
+      <div class="project-card ecommerce">
+        <h3>Customer Segmentation</h3>
+        <p>Clustered users by purchase history and engagement for targeted marketing.</p>
+        <a href="#" target="_blank">🔗 View Dashboard</a>
+      </div>
+      <div class="project-card entertainment">
+        <h3>IPL Data Dashboard</h3>
+        <p>Historical trends, top performers, and match insights from IPL 2008–2024.</p>
+        <a href="#" target="_blank">🔗 View Dashboard</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Scan the QR or click the links to connect:</p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <img src="assets/github-qr.png" alt="GitHub QR">
+        <h3>GitHub</h3>
+        <a href="https://github.com/your-profile" target="_blank">github.com/your-profile</a>
+      </div>
+      <div class="contact-card">
+        <img src="assets/linkedin-qr.png" alt="LinkedIn QR">
+        <h3>LinkedIn</h3>
+        <a href="https://linkedin.com/in/your-profile" target="_blank">linkedin.com/in/your-profile</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Shray | Power BI Developer</p>
+  </footer>
+
+  <script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+
+    function filterProjects(category) {
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach(card => {
+        card.style.display = (category === 'all' || card.classList.contains(category)) ? 'block' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
