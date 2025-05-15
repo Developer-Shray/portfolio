@@ -425,6 +425,10 @@ section h2 {
   transform: translateY(-5px);
 }
 
+.contact-btn.whatsapp:hover {
+  background-color: #25d366;
+}
+
 .dark-mode .contact-btn {
   background: rgba(30,30,40,0.9);
 }
